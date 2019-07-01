@@ -1,0 +1,26 @@
+@import '~normalize.css';
+@import './fonts.scss';
+
+$font-family: 'Montserrat', sans-serif;
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: .875rem;
+    line-height: 1;
+    font-family: $font-family;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background: #f7f7f7;
+}
+  
+strong {
+    font-weight: 500;
+}

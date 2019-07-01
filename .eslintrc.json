@@ -1,0 +1,78 @@
+{
+    "extends": [
+        "react-app",
+        "airbnb"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/jsx-closing-bracket-location": [
+            1,
+            {
+                "selfClosing": "after-props",
+                "nonEmpty": "after-props"
+            }
+        ],
+        "jsx-a11y/anchor-is-valid": [
+            "warn"
+        ],
+        "jsx-a11y/tabindex-no-positive": [
+            "warn"
+        ],
+        "jsx-a11y/mouse-events-have-key-events": [
+            "warn"
+        ],
+        "brace-style": [
+            "error",
+            "stroustrup",
+            {
+                "allowSingleLine": false
+            }
+        ],
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "arrow-body-style": [
+            "error",
+            "always"
+        ],
+        "react/destructuring-assignment": [
+            "error",
+            "always",
+            {
+                "ignoreClassFields": true
+            }
+        ],
+        "no-throw-literal": [
+            "warn"
+        ],
+        "jsx-a11y/click-events-have-key-events": [
+            "warn"
+        ],
+        "jsx-a11y/no-static-element-interactions": [
+            "warn"
+        ],
+
+        "react/forbid-prop-types": [
+            "warn"
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "config/webpack.config.eslint.js"
+            }
+        }
+    }
+}
