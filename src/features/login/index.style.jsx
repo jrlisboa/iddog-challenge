@@ -21,11 +21,3 @@ export const Form = styled.form`
     border: 1px solid rgba(188, 202, 203, 0.2);
     border-radius: 4px;
 `;
-
-export const TitleStyle = styled.h1`
-    font-weight: 700;
-    letter-spacing: 12px;
-    color: #2980b9;
-    font-size: 18px;
-    margin-bottom: 40px;
-`;

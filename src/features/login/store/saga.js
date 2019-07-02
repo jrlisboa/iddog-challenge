@@ -12,8 +12,8 @@ async function signin(credentials) {
 
     const { json } = await post('/signup', { payload });
 
-    const { token } = json;
-    return { token };
+    const { user } = json;
+    return (user || {}).token;
 }
 
 export function* handleSignin({ params }) {

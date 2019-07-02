@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-
 import { signin as signinAction } from './store/actions';
 
 import {
     MainWrapper,
     Form,
-    TitleStyle,
 } from './index.style';
 
 import Input from '../../components/input';
+import Title from '../../components/title';
 
 function Login(props) {
     const {
@@ -49,9 +48,7 @@ function Login(props) {
     return (
         <MainWrapper>
             <Form onSubmit={handleSubmit}>
-                <TitleStyle>
-                    THE IDDOG
-                </TitleStyle>
+                <Title />
                 <Input
                     type="text"
                     name="email"

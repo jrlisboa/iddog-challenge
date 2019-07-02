@@ -3,12 +3,11 @@ import { Actions, State } from './constants';
 
 const initialState = {
     state: State.IDLE,
-    authorized: false,
-    token: undefined,
+    list: [],
     error: undefined,
 };
 
-function handleSigninRequest(state) {
+function handleFeedRequest(state) {
     return {
         ...state,
         state: State.REQUESTING,
@@ -16,17 +15,16 @@ function handleSigninRequest(state) {
     };
 }
 
-function handleSigninSuccess(state, { token }) {
+function handleFeedSuccess(state, { list }) {
     return {
         ...state,
         state: State.SUCCESS,
-        authorized: true,
         loading: false,
-        token,
+        list,
     };
 }
 
-function handleSigninError(state, { error }) {
+function handleFeedError(state, { error }) {
     return {
         ...state,
         state: State.ERROR,
@@ -39,7 +37,7 @@ export default createReducer({
     ...initialState,
 },
 {
-    [Actions.SIGNIN_REQUEST]: handleSigninRequest,
-    [Actions.SIGNIN_SUCCESS]: handleSigninSuccess,
-    [Actions.SIGNIN_ERROR]: handleSigninError,
+    [Actions.FEED_REQUEST]: handleFeedRequest,
+    [Actions.FEED_SUCCESS]: handleFeedSuccess,
+    [Actions.FEED_ERROR]: handleFeedError,
 });

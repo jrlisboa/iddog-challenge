@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Shell from './shell';
 
 import Login from './features/login';
+import Feed from './features/feed';
 
 function Router() {
     return (
@@ -17,13 +18,7 @@ function Router() {
                 <Shell
                     exact
                     path="/"
-                    component={() => {
-                        return (
-                            <div>
-                                Dash
-                            </div>
-                        );
-                    }} />
+                    component={Feed} />
             </Switch>
         </BrowserRouter>
     );
