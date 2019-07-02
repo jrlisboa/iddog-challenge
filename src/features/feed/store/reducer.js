@@ -3,6 +3,7 @@ import { Actions, State } from './constants';
 
 const initialState = {
     state: State.IDLE,
+    loading: false,
     list: [],
     error: undefined,
 };
@@ -11,6 +12,7 @@ function handleFeedRequest(state) {
     return {
         ...state,
         state: State.REQUESTING,
+        list: [],
         loading: true,
     };
 }

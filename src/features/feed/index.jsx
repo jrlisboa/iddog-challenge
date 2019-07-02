@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { feed as feedAction } from './store/actions';
 
+import { State } from './store/constants';
+
 import {
     MainWrapper,
     NavigationStyle,
@@ -28,12 +30,13 @@ function Feed(props) {
     const {
         loading,
         list,
+        state,
     } = feed;
 
     const [currentTab, setCurrentTab] = useState(0);
     const [currentImage, setCurrentImage] = useState(undefined);
     useEffect(() => {
-        if (!list || !list.length) {
+        if (state === State.IDLE) {
             dispatchFeed(breeds[currentTab]);
         }
     });
