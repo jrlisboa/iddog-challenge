@@ -49,4 +49,6 @@ export const Image = styled.img`
     border: 14px solid #f7f7f7;
     border-bottom: 60px solid #f7f7f7;
     box-shadow: 0px 10px 10px rgba(0,0,0,0.17);
+    background: #CCCCCC;
+    min-width: 300px;
 `;
