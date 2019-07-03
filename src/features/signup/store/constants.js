@@ -1,10 +1,10 @@
 import keyMirror from 'key-mirror';
 
 const Actions = keyMirror({
-    SIGNIN: undefined,
-    SIGNIN_REQUEST: undefined,
-    SIGNIN_SUCCESS: undefined,
-    SIGNIN_ERROR: undefined,
+    SIGNUP: undefined,
+    SIGNUP_REQUEST: undefined,
+    SIGNUP_SUCCESS: undefined,
+    SIGNUP_ERROR: undefined,
 });
 
 const State = keyMirror({

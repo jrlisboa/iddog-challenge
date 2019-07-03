@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { signin as signinAction } from './store/actions';
+import { signup as signupAction } from './store/actions';
 
 import {
     MainWrapper,
@@ -14,7 +14,7 @@ import Title from '../../components/title';
 
 function Login(props) {
     const {
-        signin,
+        signup,
         auth,
     } = props;
 
@@ -30,14 +30,14 @@ function Login(props) {
         return (
             <Redirect
                 to={{
-                    pathname: '/',
+                    pathname: '/feed',
                 }} />
         );
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        signin(email);
+        signup(email);
     };
 
     const handleChange = (e) => {
@@ -63,7 +63,7 @@ function Login(props) {
 }
 
 Login.propTypes = {
-    signin: PropTypes.func.isRequired,
+    signup: PropTypes.func.isRequired,
     auth: PropTypes.shape({
         loading: PropTypes.bool,
         authorized: PropTypes.bool,
@@ -79,8 +79,8 @@ function mapStateToProps({ auth }) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        signin: (params) => {
-            return dispatch(signinAction(params));
+        signup: (params) => {
+            return dispatch(signupAction(params));
         },
     };
 }

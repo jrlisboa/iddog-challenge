@@ -24,7 +24,7 @@ function Shell({ component: Component, ...rest }) {
                     return (
                         <Redirect to={
                             {
-                                pathname: '/login',
+                                pathname: '/signup',
                                 state: {
                                     from: props.location,
                                 },

@@ -39,7 +39,7 @@ export default createReducer({
     ...initialState,
 },
 {
-    [Actions.SIGNIN_REQUEST]: handleSigninRequest,
-    [Actions.SIGNIN_SUCCESS]: handleSigninSuccess,
-    [Actions.SIGNIN_ERROR]: handleSigninError,
+    [Actions.SIGNUP_REQUEST]: handleSigninRequest,
+    [Actions.SIGNUP_SUCCESS]: handleSigninSuccess,
+    [Actions.SIGNUP_ERROR]: handleSigninError,
 });

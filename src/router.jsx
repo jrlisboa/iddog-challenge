@@ -3,8 +3,9 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Shell from './shell';
 
-import Login from './features/login';
+import Login from './features/signup';
 import Feed from './features/feed';
+import NotFound from './components/404';
 
 function Router() {
     return (
@@ -12,14 +13,16 @@ function Router() {
             <Switch>
                 <Route
                     exact
-                    path="/login"
+                    path="/signup"
                     component={Login} />
 
                 <Shell
                     exact
-                    path="/"
+                    path="/feed"
                     component={Feed} />
             </Switch>
+            <Route
+                component={NotFound} />
         </BrowserRouter>
     );
 }

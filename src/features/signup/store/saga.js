@@ -6,7 +6,7 @@ import {
 import { Actions } from './constants';
 import { post } from '../../../utils/request';
 
-async function signin(credentials) {
+async function signup(credentials) {
     const { email } = credentials;
     const payload = { email };
 
@@ -18,21 +18,21 @@ async function signin(credentials) {
 
 export function* handleSignin({ params }) {
     try {
-        yield put({ type: Actions.SIGNIN_REQUEST });
-        const token = yield call(signin, params);
+        yield put({ type: Actions.SIGNUP_REQUEST });
+        const token = yield call(signup, params);
         return yield put({
-            type: Actions.SIGNIN_SUCCESS,
+            type: Actions.SIGNUP_SUCCESS,
             token,
         });
     }
     catch (error) {
         return yield put({
-            type: Actions.SIGNIN_ERROR,
+            type: Actions.SIGNUP_ERROR,
             error,
         });
     }
 }
 
 export default [
-    takeEvery(Actions.SIGNIN, handleSignin),
+    takeEvery(Actions.SIGNUP, handleSignin),
 ];
