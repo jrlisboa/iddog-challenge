@@ -65,7 +65,8 @@ function Feed(props) {
                 list={list} />
             <ImageModal
                 list={list}
-                image={currentImage} />
+                change={handleSelectImage}
+                selected={currentImage} />
         </MainWrapper>
     );
 }
