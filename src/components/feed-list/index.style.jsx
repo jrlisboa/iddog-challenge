@@ -25,7 +25,7 @@ export const ImageItem = styled.div`
     transition: 150ms ease-out;
     
     &:hover {
-        margin-top: 20px;
+        margin-top: 10px;
         box-shadow: 0px 10px 10px rgba(0,0,0,0.17);
     }
 `;
