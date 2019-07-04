@@ -8,13 +8,13 @@ Dentro da pasta do projeto, execute o seguinte comando:
 ```
 $ npm install
 ```
-Para executar, utilize:
+Para executar a aplicação, utilize:
 ```
 $ npm start
 ```
 
 ## Teste
-Rode os testes utilizando o comando:
+Rode os testes com o comando:
 
 ```
 $ npm run test
@@ -26,9 +26,9 @@ E selecione a opção `> Press a to run all tests`.
 
 ## Estrutura do projeto
 
-Este projeto utiliza uma das versões da arquitetura que eu desenvolvi para atender ao novo chapter de Front-End da corretora Terra Investimentos.
+Utilizei uma das versões da arquitetura que eu desenvolvi para atender ao novo chapter de Front-End da corretora Terra Investimentos.
 
-Utilizei a **primeira versão** pois ela é pensada para Web Apps menores, porém é capaz de manter um alto controle das **stores**, **middlewares** e aplicações do **Redux** em geral.
+Escolhi a **primeira versão** pois ela é pensada para Web Apps mais simples, porém é capaz de manter um alto controle das **stores**, **middlewares** e aplicações do **Redux** em geral mesmo para modelos mais básicos de desenvolvimento.
 
 ![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/yTNEDeP.png "Versão 1 (Cada rota é dona de sua própria feature)")
       Versão 1 (Cada rota é dona de sua própria feature. Ex: IDdog)
