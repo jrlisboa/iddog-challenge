@@ -36,14 +36,9 @@ class Feed extends Component {
         };
     }
 
-    componentDidMount(prevProps) {
-        const { feed } = prevProps || {};
+    componentDidMount() {
         const { dispatchFeed } = this.props;
-        const { breed } = feed || {};
-
-        if (breed !== this.category) {
-            dispatchFeed(this.category);
-        }
+        dispatchFeed(this.category);
     }
 
     handleChangeTab = (index) => {
