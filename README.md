@@ -43,7 +43,4 @@ Estes modelos são atualizados sempre que necessário, melhorando a legibilidade
 
 #### Considerações
 
-Espero que gostem do que foi desenvolvido, e que se encaixe com as expectativas, mesmo sendo feito entre os almoços e pós expedientes, foi bem divertido e inclusive deixei um easter egg em uma das páginas. ~~not-found~~
-
-
-Aliás, também me deixou com saudades do meu dog  :dog:
+Espero que gostem do que foi desenvolvido, e que se encaixe com as expectativas, foi bem divertido e inclusive deixei um easter egg em uma das páginas. | ~~not-found~~ | Aliás, também me deixou com saudades do meu dog  :dog:
