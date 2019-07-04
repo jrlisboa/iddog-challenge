@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#IDDOG Challenge  :tw-1f680:
 
-## Available Scripts
+Desafio IDdog para a IDwall.
 
-In the project directory, you can run:
+##Instalação
+Dentro da pasta do projeto, execute o seguinte comando:
 
-### `npm start`
+```
+$ npm install
+```
+Para executar, utilize:
+```
+$ npm start
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Teste
+Rode os testes utilizando o comando:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```
+$ npm run test
+```
+E selecione a opção `> Press a to run all tests`.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[========]
 
-### `npm run build`
+##Estrutura do projeto
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este projeto utiliza uma das versões da arquitetura que eu desenvolvi para atender ao novo chapter de Front-End da corretora Terra Investimentos.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Utilizei a **primeira versão** pois ela é pensada para Web Apps menores, porém é capaz de manter um alto controle das **stores**, **middlewares** e aplicações do **Redux** em geral.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/yTNEDeP.png "Versão 1 (Cada rota é dona de sua própria feature)")
+      Versão 1 (Cada rota é dona de sua própria feature. Ex: IDdog)
 
-### `npm run eject`
+![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/lDrSZ8j.png "Versão 1 (Cada rota é dona de sua própria feature)")
+      Versão 2 (Cada rota pode ter uma ou mais features. Ex: Portal, Ecommerce e etc.)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-----
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Estes modelos são atualizados sempre que necessário, melhorando a legibilidade dos projetos e desempenho.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[========]
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+####Considerações
 
-## Learn More
+Espero que gostem do que foi desenvolvido, e que se encaixe com as expectativas, mesmo sendo feito entre os almoços e pós expedientes, foi bem divertido e inclusive deixei um easter egg em uma das páginas. ~~not-found~~
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Aliás, também me deixou com saudades do meu Dog  :tw-1f436:
