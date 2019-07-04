@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createBrowserHistory } from 'history';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { feed as feedAction } from './store/actions';
@@ -14,6 +15,8 @@ import Title from '../../components/title';
 import Menu from '../../components/menu';
 import FeedList from '../../components/feed-list';
 import ImageModal from '../../components/image-modal';
+
+const history = createBrowserHistory();
 
 const breeds = [
     'husky',
@@ -42,6 +45,7 @@ function Feed(props) {
     });
 
     const handleChangeTab = (index) => {
+        history.push(`/feed?category=${breeds[index]}`);
         dispatchFeed(breeds[index]);
         setCurrentTab(index);
     };

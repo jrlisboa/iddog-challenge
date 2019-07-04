@@ -21,3 +21,33 @@ export const Form = styled.form`
     border: 1px solid rgba(188, 202, 203, 0.2);
     border-radius: 4px;
 `;
+
+export const InputWrapper = styled.div`
+    width: 100%;
+    display: flex;
+`;
+
+export const ButtonStyle = styled.div`
+    right: 10px;
+    height: 30px;
+    width: 50px;
+    line-height: 30px;
+    margin-top: 7px;
+    text-align: center;
+    border: none;
+    color: #FFFFFF;
+    background: #2980b9;
+    border-radius: 4px;
+    margin-left: -60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 200ms ease-out;
+
+    ${props => !props.focus || `opacity: 1;`}
+    ${props => {
+        return !props.disabled || `
+            cursor: not-allowed;
+            background: #CCCCCC;
+        `;
+    }}
+`;

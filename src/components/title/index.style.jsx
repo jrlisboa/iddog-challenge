@@ -8,8 +8,4 @@ export const TitleStyle = styled.h1`
     font-size: 18px;
     margin-bottom: 40px;
     transition: 300ms;
-
-    &:hover {
-        filter: brightness(50%);
-    }
 `;

@@ -37,13 +37,14 @@ function Shell({ component: Component, ...rest }) {
 }
 
 Shell.propTypes = {
-    location: PropTypes.object.isRequired,
+    location: PropTypes.object,
     component: PropTypes.any,
     authorized: PropTypes.bool.isRequired,
 };
 
 Shell.defaultProps = {
     component: <div />,
+    location: undefined,
 };
 
 function mapStateToProps({ auth }) {

@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import { createBrowserHistory } from 'history';
+
 
 import {
     MainWrapper,
@@ -11,8 +13,12 @@ import {
     fadeOut,
 } from './index.style';
 
+const history = createBrowserHistory();
+const { location } = history;
 const target = document.querySelector('#root');
 const modalRoot = document.getElementById('modal-root');
+
+console.log('location', location);
 
 class ImageModal extends Component {
     el = document.createElement('div');

@@ -20,9 +20,16 @@ function Router() {
                     exact
                     path="/feed"
                     component={Feed} />
+
+                <Route
+                    exact
+                    path="/"
+                    component={() => {
+                        window.location.href = '/feed';
+                    }} />
+                <Route
+                    component={NotFound} />
             </Switch>
-            <Route
-                component={NotFound} />
         </BrowserRouter>
     );
 }

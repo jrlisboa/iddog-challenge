@@ -6,11 +6,18 @@ import { signup as signupAction } from './store/actions';
 
 import {
     MainWrapper,
+    InputWrapper,
+    ButtonStyle,
     Form,
 } from './index.style';
 
 import Input from '../../components/input';
 import Title from '../../components/title';
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
 
 function Login(props) {
     const {
@@ -25,6 +32,7 @@ function Login(props) {
     } = auth;
 
     const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
 
     if (authorized) {
         return (
@@ -37,7 +45,10 @@ function Login(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        signup(email);
+        if (!validateEmail(email)) {
+            return setEmailError(true);
+        }
+        return signup(email);
     };
 
     const handleChange = (e) => {
@@ -49,14 +60,22 @@ function Login(props) {
         <MainWrapper>
             <Form onSubmit={handleSubmit}>
                 <Title />
-                <Input
-                    type="text"
-                    name="email"
-                    value={email}
-                    onChange={handleChange}
-                    loading={loading}
-                    error={!!error}
-                    placeholder="Your email" />
+                <InputWrapper>
+                    <Input
+                        type="text"
+                        name="email"
+                        value={email}
+                        onChange={handleChange}
+                        loading={loading}
+                        error={!!error || emailError}
+                        placeholder="Your email" />
+                    <ButtonStyle
+                        onClick={handleSubmit}
+                        focus={!!email}
+                        type="submit">
+                        GO
+                    </ButtonStyle>
+                </InputWrapper>
             </Form>
         </MainWrapper>
     );
