@@ -24,7 +24,7 @@ E selecione a opção `> Press a to run all tests`.
 
 ------------
 
-##Estrutura do projeto
+## Estrutura do projeto
 
 Este projeto utiliza uma das versões da arquitetura que eu desenvolvi para atender ao novo chapter de Front-End da corretora Terra Investimentos.
 
@@ -41,7 +41,7 @@ Estes modelos são atualizados sempre que necessário, melhorando a legibilidade
 
 ------------
 
-####Considerações
+#### Considerações
 
 Espero que gostem do que foi desenvolvido, e que se encaixe com as expectativas, mesmo sendo feito entre os almoços e pós expedientes, foi bem divertido e inclusive deixei um easter egg em uma das páginas. ~~not-found~~
 
