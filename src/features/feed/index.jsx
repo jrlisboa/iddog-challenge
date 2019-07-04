@@ -31,7 +31,8 @@ class Feed extends Component {
         if (!this.category) history.push(`/feed?category=${breeds[0]}`);
 
         this.state = {
-            currentTab: breeds.indexOf(this.category) || 0,
+            currentTab: breeds.indexOf(this.category) > -1
+                ? breeds.indexOf(this.category) : 0,
             currentImage: undefined,
         };
     }
