@@ -1,8 +1,8 @@
-#IDDOG Challenge  :tw-1f680:
+# IDDOG Challenge  :rocket:
 
 Desafio IDdog para a IDwall.
 
-##Instalação
+## Instalação
 Dentro da pasta do projeto, execute o seguinte comando:
 
 ```
@@ -13,7 +13,7 @@ Para executar, utilize:
 $ npm start
 ```
 
-##Teste
+## Teste
 Rode os testes utilizando o comando:
 
 ```
@@ -22,7 +22,7 @@ $ npm run test
 E selecione a opção `> Press a to run all tests`.
 
 
-[========]
+------------
 
 ##Estrutura do projeto
 
@@ -36,17 +36,14 @@ Utilizei a **primeira versão** pois ela é pensada para Web Apps menores, poré
 ![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/lDrSZ8j.png "Versão 1 (Cada rota é dona de sua própria feature)")
       Versão 2 (Cada rota pode ter uma ou mais features. Ex: Portal, Ecommerce e etc.)
 
------
 
 Estes modelos são atualizados sempre que necessário, melhorando a legibilidade dos projetos e desempenho.
 
-[========]
+------------
 
 ####Considerações
 
 Espero que gostem do que foi desenvolvido, e que se encaixe com as expectativas, mesmo sendo feito entre os almoços e pós expedientes, foi bem divertido e inclusive deixei um easter egg em uma das páginas. ~~not-found~~
 
-------------
 
-
-Aliás, também me deixou com saudades do meu Dog  :tw-1f436:
+Aliás, também me deixou com saudades do meu dog  :dog:
