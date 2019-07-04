@@ -22,6 +22,10 @@ describe('Input component', () => {
             onChange={onChangeMock} />,
     );
 
+    it('Should match snapshot', () => {
+        expect(component).toMatchSnapshot();
+    });
+
     test('Should Input change value', () => {
         component.find(InputStyle).simulate('change', event);
         expect(onChangeMock).toHaveReturnedWith(event);

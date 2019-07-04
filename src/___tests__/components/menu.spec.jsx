@@ -21,6 +21,10 @@ describe('Menu component', () => {
             items={items} />,
     );
 
+    it('Should match snapshot', () => {
+        expect(component).toMatchSnapshot();
+    });
+
     it('Should render Menu component with correct content', () => {
         expect(component.find(MenuWrapper)).toBeTruthy();
         expect(component.find(MenuWrapper).children()).toHaveLength(items.length);

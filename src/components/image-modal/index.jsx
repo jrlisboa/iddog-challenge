@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { createBrowserHistory } from 'history';
 
-
+import queryString from '../../utils/qs';
 import {
     MainWrapper,
     ImageWrapper,
@@ -13,27 +13,37 @@ import {
     fadeOut,
 } from './index.style';
 
-const history = createBrowserHistory();
-const { location } = history;
 const target = document.querySelector('#root');
 const modalRoot = document.getElementById('modal-root');
-
-console.log('location', location);
+const history = createBrowserHistory();
 
 class ImageModal extends Component {
     el = document.createElement('div');
 
     constructor(props) {
         super(props);
-        const { selected } = this.props;
+        const {
+            selected,
+        } = this.props;
+        this.id = queryString().id;
         this.state = {
             fade: fadeIn,
             render: selected,
         };
     }
 
+    componentDidMount() {
+        const { change } = this.props;
+        if (this.id !== undefined) {
+            change(this.id);
+            modalRoot.appendChild(this.el);
+            this.setBlur();
+        }
+    }
+
     componentDidUpdate(prevProps) {
-        const { selected } = this.props;
+        const { selected, category } = this.props;
+
         if (
             selected !== prevProps.selected
             && prevProps.selected === undefined
@@ -42,6 +52,10 @@ class ImageModal extends Component {
                 fade: fadeIn,
                 render: selected,
             });
+
+            history.push(
+                `/feed?category=${category}&id=${selected}`,
+            );
             modalRoot.appendChild(this.el);
             this.setBlur();
         }
@@ -53,6 +67,7 @@ class ImageModal extends Component {
                     this.setState({
                         render: selected,
                     });
+
                     modalRoot.removeChild(this.el);
                     target.removeAttribute('style');
                 }, 300);
@@ -62,7 +77,10 @@ class ImageModal extends Component {
     }
 
     setBlur = () => {
-        target.setAttribute('style', 'filter: blur(5px);');
+        target.setAttribute(
+            'style',
+            'filter: blur(8px);',
+        );
     }
 
     render() {
@@ -83,10 +101,7 @@ class ImageModal extends Component {
                         change(undefined);
                     }}>
                     <ImageWrapper
-                        fade={fade}
-                        onClick={(e) => {
-                            e.preventDefault();
-                        }}>
+                        fade={fade}>
                         <Image
                             src={url} />
                     </ImageWrapper>
@@ -108,10 +123,12 @@ ImageModal.propTypes = {
     list: PropTypes.arrayOf(PropTypes.string),
     selected: PropTypes.number,
     change: PropTypes.func.isRequired,
+    category: PropTypes.string,
 };
 
 ImageModal.defaultProps = {
     selected: undefined,
+    category: 'husky',
     list: [],
 };
 

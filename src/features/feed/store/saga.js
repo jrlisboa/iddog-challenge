@@ -16,18 +16,22 @@ async function fetchFeed({ params, token }) {
     const url = category ? `/feed?category=${category}` : '/feed';
     const { json } = await get(url, { bearer: token });
 
-    const { list } = json;
-    return list || [];
+    const { list, category: breed } = json;
+    return {
+        list,
+        breed,
+    };
 }
 
 export function* handleFeed({ params }) {
     try {
         yield put({ type: Actions.FEED_REQUEST });
         const token = yield select(getToken);
-        const list = yield call(fetchFeed, { params, token });
+        const { list, breed } = yield call(fetchFeed, { params, token });
         return yield put({
             type: Actions.FEED_SUCCESS,
             list,
+            breed,
         });
     }
     catch (error) {

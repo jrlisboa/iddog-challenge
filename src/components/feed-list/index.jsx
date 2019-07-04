@@ -58,6 +58,7 @@ function FeedList(props) {
 
     return (
         <InfiniteScroll
+            className="infinite-scroll"
             pageStart={0}
             loadMore={handleLoad}
             hasMore={true || false}
@@ -70,9 +71,13 @@ function FeedList(props) {
 }
 
 FeedList.propTypes = {
-    list: PropTypes.arrayOf(PropTypes.string).isRequired,
+    list: PropTypes.arrayOf(PropTypes.string),
     selectImage: PropTypes.func.isRequired,
     loading: PropTypes.bool.isRequired,
+};
+
+FeedList.defaultProps = {
+    list: [],
 };
 
 export default FeedList;

@@ -41,6 +41,11 @@ export const ImageWrapper = styled.div`
     border-radius: 4px;
     display: flex;
     animation: ${props => props.fade} 350ms ease-out;
+
+    @media screen and (max-width: 500px) {
+        height: auto;
+        width: 100%;
+    }
 `;
 
 export const Image = styled.img`
@@ -51,4 +56,9 @@ export const Image = styled.img`
     box-shadow: 0px 10px 10px rgba(0,0,0,0.17);
     background: #CCCCCC;
     min-width: 300px;
+
+    @media screen and (max-width: 500px) {
+        height: auto;
+        width: 85%;
+    }
 `;

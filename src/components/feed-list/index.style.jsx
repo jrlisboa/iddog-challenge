@@ -2,17 +2,21 @@
 import styled from 'styled-components';
 
 export const MainWrapper = styled.div`
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 30px;
+
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
 `;
 
 export const ImageItem = styled.div`
     width: 200px;
     height: 200px;
-    margin: 30px 10px;
+    margin: 20px 20px;
     border-radius: 4px;
     background: #CCCCCC url(${props => props.src}) center;
     background-size: 150%;

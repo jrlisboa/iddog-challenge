@@ -27,6 +27,12 @@ function Router() {
                     component={() => {
                         window.location.href = '/feed';
                     }} />
+
+                <Route
+                    exact
+                    path="/not-found"
+                    component={NotFound} />
+
                 <Route
                     component={NotFound} />
             </Switch>

@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 export const MainWrapper = styled.div`
     width: 100%;
+
+    .infinite-scroll {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 export const NavigationStyle = styled.div`

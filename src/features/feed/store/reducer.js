@@ -17,12 +17,13 @@ function handleFeedRequest(state) {
     };
 }
 
-function handleFeedSuccess(state, { list }) {
+function handleFeedSuccess(state, { list, breed }) {
     return {
         ...state,
         state: State.SUCCESS,
         loading: false,
         list,
+        breed,
     };
 }
 
