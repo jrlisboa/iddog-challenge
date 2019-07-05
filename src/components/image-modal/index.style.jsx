@@ -59,6 +59,7 @@ export const Image = styled.img`
 
     @media screen and (max-width: 500px) {
         height: auto;
-        width: 85%;
+        width: 90%;
+        margin-left: 5%;
     }
 `;
