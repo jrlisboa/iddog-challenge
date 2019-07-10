@@ -31,7 +31,7 @@ Utilizei uma das versões da arquitetura que eu desenvolvi para atender ao novo 
 Escolhi a **primeira versão** pois ela é pensada para Web Apps mais simples, porém é capaz de manter um alto controle das **stores**, **middlewares** e aplicações do **Redux** em geral mesmo para modelos mais básicos de desenvolvimento.
 
 Versão 1 (Cada rota é dona de sua própria feature. Ex: IDdog)
-![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/yTNEDeP.png "Versão 1 (Cada rota é dona de sua própria feature)")
+![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/0gZ2mma.png "Versão 1 (Cada rota é dona de sua própria feature)")
 
 Versão 2 (Cada rota pode ter uma ou mais features. Ex: Facebook)
 ![Versão 1 (Cada rota é dona de sua própria feature)](https://i.imgur.com/lDrSZ8j.png "Versão 1 (Cada rota é dona de sua própria feature)")
